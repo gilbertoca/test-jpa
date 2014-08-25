@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <veiculo_publicacao id="101" nu_publicacao="4043" tipo="DOE" dt_publicacao="2013-01-01" />
+    <veiculo_publicacao id="113" nu_publicacao="4044" tipo="DOE" dt_publicacao="2014-11-01" />
+    <ato_legal id="102" veiculo_publicacao_id="101" nu_ato_legal="35" autoridade="GOVERNADOR" tipo="LEI" dt_ato_legal="2013-01-01" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01"/>
+    <ato_legal id="110" veiculo_publicacao_id="101" nu_ato_legal="350" autoridade="GOVERNADOR" tipo="NOMEACAO" dt_ato_legal="2014-01-01" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-10-10"/>    
+    <ato_legal id="114" veiculo_publicacao_id="113" nu_ato_legal="01" autoridade="GOVERNADOR" tipo="REVOGACAO" dt_ato_legal="2014-11-01" dt_entra_em_vigor="2014-11-01" dt_efeito_juridico="2014-10-10"/>    
+    <denominacao_cargo id="103" nome="Diretor" simbolo_nivel="CDE-V" ordem_importancia="B" agrupamento="DIRIGENTES_E_ASSESSORES" ato_legal_inicio_id="102" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01" />
+    <denominacao_cargo id="115" nome="Coordenador" simbolo_nivel="CDE-IV" ordem_importancia="C" agrupamento="DIRIGENTES_E_ASSESSORES" ato_legal_inicio_id="102" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01" />
+    <denominacao_cargo id="111" nome="Secretário" simbolo_nivel="MU" ordem_importancia="A" agrupamento="AGENTES_POLITICOS" ato_legal_inicio_id="102" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01" />
+    <denominacao_cargo_detalhe id="104" denominacao_cargo_id="103" quantitativo_amplo="15" ato_legal_inicio_id="102" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01" remuneracao="4050.00" percentual_acrescimo_efetivo="25"/>    
+    <denominacao_cargo_detalhe id="116" denominacao_cargo_id="115" quantitativo_amplo="150" ato_legal_inicio_id="102" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01" remuneracao="3050.00" percentual_acrescimo_efetivo="25"/>    
+    <denominacao_cargo_detalhe id="112" denominacao_cargo_id="111" quantitativo_amplo="48" ato_legal_inicio_id="102" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01" remuneracao="7500.00" percentual_acrescimo_efetivo="25"/>    
+    <entidade id="105" nome="Secretaria da Administração" sigla="SECAD" eh_administracao_direta="true" ato_legal_inicio_id="102" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01" />
+    <estrutura_operacional id="106" denominacao_cargo_id="103" entidade_id="105" quantitativo_especifico="3" ato_legal_inicio_id="102" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01" />
+    <vaga id="107" estrutura_operacional_id="106" eh_provido="false" nome="SECAD-Diretor-CDE-VI-3-0" ato_legal_inicio_id="102" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01" />
+    <vaga id="108" estrutura_operacional_id="106" eh_provido="false" nome="SECAD-Diretor-CDE-VI-3-1" ato_legal_inicio_id="102" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01" />
+    <vaga id="109" estrutura_operacional_id="106" eh_provido="false" nome="SECAD-Diretor-CDE-VI-3-2" ato_legal_inicio_id="102" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01" />        
+    <estrutura_operacional id="117" denominacao_cargo_id="111" entidade_id="105" quantitativo_especifico="1" ato_legal_inicio_id="102" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01" />
+    <vaga id="118" estrutura_operacional_id="117" eh_provido="true" nome="SECAD-Secretário-MU-1-0" ato_legal_inicio_id="102" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01" />    
+    <nomeacao id="119" nome_pessoa="Lúcio Mascarenhas" vaga_id="118" ato_legal_inicio_id="102" dt_entra_em_vigor="2013-01-01" dt_efeito_juridico="2014-01-01" />    
+    <exoneracao />
+    <demissao />
+    <redistribuicao />
+    <etl_servidor_publico nomeacao_id="119" etl_nome_servidor="Lúcio Mascarenhas" etl_num_funcional="123456" etl_num_vinculo="1" etl_cargo_remuneracao="9500.00" etl_folha_mes_ano="2014-06-01" etl_dt_busca="2014-06-01" />
+</dataset>
