@@ -45,11 +45,11 @@ public class ParentB {
         this.name = name;
     }
 
-    public ChildB getchild() {
+    public ChildB getChild() {
         return child;
     }
 
-    public void setchild(ChildB child) {
+    public void setChild(ChildB child) {
         this.child = child;
     }
     @Override

@@ -9,28 +9,27 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "parent_c")
-public class ParentC implements Serializable {
+@Table(name = "parent_d")
+public class ParentD implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "id")
     private Long id;
-    @Column(name = "name")
+
     private String name;
 
-    @OneToOne(mappedBy = "parentC")
-    private ChildC child;
+    @OneToOne(mappedBy = "parentD")
+    private ChildD child;
 
-    public ParentC() {
+    public ParentD() {
     }
 
-    public ParentC(String name, ChildC child) {
+    public ParentD(String name, ChildD child) {
         this.name = name;
         this.child = child;
     }
 
-    public ParentC(String name) {
+    public ParentD(String name) {
         this.name = name;
     }
 
@@ -50,11 +49,11 @@ public class ParentC implements Serializable {
         this.name = name;
     }
 
-    public ChildC getChild() {
+    public ChildD getChild() {
         return child;
     }
 
-    public void setChild(ChildC child) {
+    public void setChild(ChildD child) {
         this.child = child;
     }
     @Override

@@ -24,7 +24,7 @@ public class MainC {
 
         em.persist(parentC1);
         child1.setParentC(parentC1);
-        parentC1.setchild(child1);
+        parentC1.setChild(child1);
         em.persist(child1);
 
         ParentC parentC2 = new ParentC("Captain Nemo");
@@ -32,7 +32,7 @@ public class MainC {
 
         em.persist(parentC2);
         child2.setParentC(parentC2);
-        parentC2.setchild(child2);
+        parentC2.setChild(child2);
         em.persist(child2);
 
         em.flush();

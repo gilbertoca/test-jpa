@@ -11,34 +11,32 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "child_C")
-public class ChildC implements Serializable {
+@Table(name = "child_d")
+public class ChildD implements Serializable {
     @Id
-    @Column(name = "parent_id")
     private Long id;
     
     @OneToOne    
     @MapsId
-    @JoinColumn(name = "parent_id")
-    private ParentC parentC;
+    private ParentD parentD;
     
     @Column(name = "name")
     private String name;
 
-    public ChildC() {
+    public ChildD() {
         super();
     }
 
-    public ChildC(String name) {
+    public ChildD(String name) {
         this.name = name;
     }
 
-    public ParentC getParentC() {
-        return parentC;
+    public ParentD getParentD() {
+        return parentD;
     }
 
-    public void setParentC(ParentC parentC) {
-        this.parentC = parentC;
+    public void setParentD(ParentD parentD) {
+        this.parentD = parentD;
     }
 
     public String getName() {

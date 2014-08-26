@@ -23,7 +23,7 @@ public class MainB {
 
         em.persist(parentB1);
         child1.setParentB(parentB1);
-        parentB1.setchild(child1);
+        parentB1.setChild(child1);
         em.persist(child1);
 
         ParentB parentB2 = new ParentB("Captain Nemo");
@@ -31,7 +31,7 @@ public class MainB {
 
         em.persist(parentB2);
         child2.setParentB(parentB2);
-        parentB2.setchild(child2);
+        parentB2.setChild(child2);
         em.persist(child2);
 
         em.flush();
