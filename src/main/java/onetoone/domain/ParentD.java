@@ -18,15 +18,7 @@ public class ParentD implements Serializable {
 
     private String name;
 
-    @OneToOne(mappedBy = "parentD")
-    private ChildD child;
-
     public ParentD() {
-    }
-
-    public ParentD(String name, ChildD child) {
-        this.name = name;
-        this.child = child;
     }
 
     public ParentD(String name) {
@@ -49,16 +41,8 @@ public class ParentD implements Serializable {
         this.name = name;
     }
 
-    public ChildD getChild() {
-        return child;
-    }
-
-    public void setChild(ChildD child) {
-        this.child = child;
-    }
     @Override
     public String toString() {
-        return "Parent [id=" + id + ", name=" + name + ", child="
-                + child.getName() + "]";
+        return "Parent [id=" + id + ", name=" + name +  "]";
     }
 }

@@ -26,7 +26,6 @@ public class SimpleDTest
 
 	    em.persist(ParentD1);
 	    child1.setParentD(ParentD1);
-	    ParentD1.setChild(child1);
 	    em.persist(child1);
 
 	    ParentD ParentD2 = new ParentD("Captain Nemo");
@@ -34,7 +33,6 @@ public class SimpleDTest
 
 	    em.persist(ParentD2);
 	    child2.setParentD(ParentD2);
-	    ParentD2.setChild(child2);
 	    em.persist(child2);
 
 	    em.flush();
