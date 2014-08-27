@@ -13,7 +13,7 @@ public class SimpleDTest
     public void testSimple()
     {
         NucleusLogger.GENERAL.info(">> test START");
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MyTest");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("SimpleDTest");
 
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();

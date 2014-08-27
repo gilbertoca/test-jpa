@@ -1,13 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<persistence xmlns="http://java.sun.com/xml/ns/persistence"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
-    version="1.0">
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
 
-    <persistence-unit name="MyTest">
+    <persistence-unit name="SimplePersonTest">
         <!-- Add all of your model classes here -->
         <class>mydomain.model.Person</class>
-        <exclude-unlisted-classes />
+        <class>mydomain.model.MedicalHistory</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <!-- Update these datastore details if different -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:nucleus"/>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="SimpleBTest">
+        <!-- Add all of your model classes here -->
+        <class>onetoone.domain.ParentB</class>
+        <class>onetoone.domain.ChildB</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <!-- Update these datastore details if different -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:nucleus"/>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="SimpleCTest">
+        <!-- Add all of your model classes here -->
+        <class>onetoone.domain.ParentC</class>
+        <class>onetoone.domain.ChildC</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <!-- Update these datastore details if different -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:nucleus"/>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="SimpleDTest">
+        <!-- Add all of your model classes here -->
+        <class>onetoone.domain.ParentD</class>
+        <class>onetoone.domain.ChildD</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <!-- Update these datastore details if different -->
             <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:nucleus"/>

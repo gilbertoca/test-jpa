@@ -2,10 +2,8 @@ package onetoone.domain;
 
 
 import java.io.Serializable;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -20,7 +18,6 @@ public class ChildD implements Serializable {
     @MapsId
     private ParentD parentD;
     
-    @Column(name = "name")
     private String name;
 
     public ChildD() {
@@ -29,6 +26,14 @@ public class ChildD implements Serializable {
 
     public ChildD(String name) {
         this.name = name;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public ParentD getParentD() {
