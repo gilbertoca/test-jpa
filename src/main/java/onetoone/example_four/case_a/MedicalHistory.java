@@ -1,4 +1,4 @@
-package mydomain.model;
+package onetoone.example_four.case_a;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

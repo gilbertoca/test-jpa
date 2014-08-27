@@ -1,18 +1,16 @@
-package org.datanucleus.test;
+package onetoone.example_four.case_b;
 
 import java.util.List;
 import javax.persistence.*;
-import mydomain.model.MedicalHistory;
-import mydomain.model.Person;
 import org.datanucleus.util.NucleusLogger;
 import org.junit.*;
 
-public class SimplePersonTest {
+public class SimpleCaseBTest {
 
     @Test
     public void testSimple() {
         NucleusLogger.GENERAL.info(">> test START");
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("SimplePersonTest");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("SimpleCaseBTest");
 
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();

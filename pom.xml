@@ -93,7 +93,7 @@
                 <version>4.0.0-release</version>
                 <configuration>
                     <api>JPA</api>
-                    <persistenceUnitName>MyTest</persistenceUnitName>
+                    <!--persistenceUnitName>MyTest</persistenceUnitName-->
                     <fork>false</fork>
                     <verbose>false</verbose>
                     <log4jConfiguration>${basedir}/src/main/resources/log4j.properties</log4jConfiguration>
