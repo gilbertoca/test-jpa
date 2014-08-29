@@ -2,14 +2,12 @@ package onetoone.example_four.case_b;
 
 import java.util.List;
 import javax.persistence.*;
-import org.datanucleus.util.NucleusLogger;
 import org.junit.*;
 
 public class SimpleCaseBTest {
 
     @Test
     public void testSimple() {
-        NucleusLogger.GENERAL.info(">> test START");
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("SimpleCaseBTest");
 
         EntityManager em = emf.createEntityManager();
@@ -55,6 +53,5 @@ public class SimpleCaseBTest {
 //        }
 
         emf.close();
-        NucleusLogger.GENERAL.info(">> test END");
     }
 }

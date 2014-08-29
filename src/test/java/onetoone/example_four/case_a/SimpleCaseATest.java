@@ -1,17 +1,15 @@
 package onetoone.example_four.case_a;
 
-import onetoone.example_four.case_a.Person;
-import onetoone.example_four.case_a.MedicalHistory;
 import java.util.List;
 import javax.persistence.*;
-import org.datanucleus.util.NucleusLogger;
+
 import org.junit.*;
 
 public class SimpleCaseATest {
 
     @Test
     public void testSimple() {
-        NucleusLogger.GENERAL.info(">> test START");
+        
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("SimpleCaseATest");
 
         EntityManager em = emf.createEntityManager();
@@ -44,7 +42,6 @@ public class SimpleCaseATest {
 //        }
 //        catch (Throwable thr)
 //        {
-//            NucleusLogger.GENERAL.error(">> Exception thrown persisting data", thr);
 //            fail("Failed to persist data : " + thr.getMessage());
 //        }
 //        finally 
@@ -57,6 +54,5 @@ public class SimpleCaseATest {
 //        }
 
         emf.close();
-        NucleusLogger.GENERAL.info(">> test END");
     }
 }

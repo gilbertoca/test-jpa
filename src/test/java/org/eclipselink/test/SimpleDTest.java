@@ -1,18 +1,18 @@
-package org.datanucleus.test;
+package org.eclipselink.test;
 
 import org.junit.*;
 import javax.persistence.*;
 import java.util.List;
 import static org.junit.Assert.*;
 import onetoone.domain.*;
-import org.datanucleus.util.NucleusLogger;
+
 
 public class SimpleDTest
 {
     @Test
     public void testSimple()
     {
-        NucleusLogger.GENERAL.info(">> test START");
+        
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("SimpleDTest");
 
         EntityManager em = emf.createEntityManager();
@@ -49,7 +49,6 @@ public class SimpleDTest
 //        }
 //        catch (Throwable thr)
 //        {
-//            NucleusLogger.GENERAL.error(">> Exception thrown persisting data", thr);
 //            fail("Failed to persist data : " + thr.getMessage());
 //        }
 //        finally 
@@ -62,6 +61,5 @@ public class SimpleDTest
 //        }
 
         emf.close();
-        NucleusLogger.GENERAL.info(">> test END");
     }
 }

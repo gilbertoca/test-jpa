@@ -1,23 +1,20 @@
-package org.datanucleus.test;
+package org.eclipselink.test;
 
 import org.junit.*;
 import javax.persistence.*;
 
 import static org.junit.Assert.*;
-import org.datanucleus.util.NucleusLogger;
 
 public class MultithreadTest
 {
     @Test
     public void testMulti()
     {
-        NucleusLogger.GENERAL.info(">> test START");
-        final EntityManagerFactory emf = Persistence.createEntityManagerFactory("MyTest");
+        final EntityManagerFactory emf = Persistence.createEntityManagerFactory("SimpleBTest");
 
         try
         {
             // Persist some data
-            NucleusLogger.GENERAL.debug(">> Persisting data");
             EntityManager em = emf.createEntityManager();
             EntityTransaction tx = em.getTransaction();
             try
@@ -30,7 +27,6 @@ public class MultithreadTest
             }
             catch (Throwable thr)
             {
-                NucleusLogger.GENERAL.error("Exception persisting objects", thr);
                 fail("Exception persisting data : " + thr.getMessage());
             }
             finally
@@ -41,7 +37,6 @@ public class MultithreadTest
                 }
                 em.close();
             }
-            NucleusLogger.GENERAL.debug(">> Persisted data");
 
             // Create the Threads
             int THREAD_SIZE = 500;
@@ -61,7 +56,6 @@ public class MultithreadTest
             }
 
             // Run the Threads
-            NucleusLogger.GENERAL.debug(">> Starting threads");
             for (int i = 0; i < THREAD_SIZE; i++)
             {
                 threads[i].start();
@@ -77,7 +71,6 @@ public class MultithreadTest
                     fail(e.getMessage());
                 }
             }
-            NucleusLogger.GENERAL.debug(">> Completed threads");
 
             // Process any errors from threads and fail the test if any failed
             for (String error : threadErrors)
@@ -94,7 +87,6 @@ public class MultithreadTest
         }
 
         emf.close();
-        NucleusLogger.GENERAL.info(">> test END");
     }
 
     /**
@@ -116,7 +108,6 @@ public class MultithreadTest
         }
         catch (Throwable thr)
         {
-            NucleusLogger.GENERAL.error("Exception performing test", thr);
             return "Exception performing test : " + thr.getMessage();
         }
         finally
