@@ -51,6 +51,8 @@
                             <directory>${basedir}</directory>
                             <includes>
                                 <include>*.log</include>
+                                <include>create*.sql</include>
+                                <include>drop*.sql</include>
                                 <include>test.xls</include>
                                 <include>test.ods</include>
                                 <include>test.ooxml</include>

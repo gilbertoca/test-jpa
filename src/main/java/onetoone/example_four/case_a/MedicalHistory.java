@@ -13,6 +13,8 @@ public class MedicalHistory {
     @JoinColumn(name = "FK")
     Person patient;
 
+    public MedicalHistory() {
+    }
     public MedicalHistory(Person p) {
         this.patient = p;
     }

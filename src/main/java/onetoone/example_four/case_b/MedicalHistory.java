@@ -18,6 +18,9 @@ public class MedicalHistory {
     @OneToOne
     Person patient;
 
+    public MedicalHistory() {
+    }
+    
     public MedicalHistory(Person p) {
         this.patient = p;
     }
