@@ -7,11 +7,14 @@
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <!-- Update these datastore details if different -->
-      <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:nucleus"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:case_a"/>
       <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
       <property name="javax.persistence.jdbc.user" value="sa"/>
       <property name="javax.persistence.jdbc.password" value=""/>
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+      <property name="javax.persistence.schema-generation.scripts.action" value="drop-and-create"/>
+      <property name="javax.persistence.schema-generation.scripts.create-target" value="create_a.sql"/>
+      <property name="javax.persistence.schema-generation.scripts.drop-target" value="drop_a.sql"/>
     </properties>
   </persistence-unit>
   <persistence-unit name="SimpleCaseBTest">
@@ -21,11 +24,13 @@
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <!-- Update these datastore details if different -->
-      <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:nucleus"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:case_b"/>
       <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
       <property name="javax.persistence.jdbc.user" value="sa"/>
       <property name="javax.persistence.jdbc.password" value=""/>
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+      <property name="javax.persistence.schema-generation.scripts.create-target" value="create_b.sql"/>
+      <property name="javax.persistence.schema-generation.scripts.drop-target" value="drop_b.sql"/>      
     </properties>
   </persistence-unit>
   <persistence-unit name="SimpleBTest">

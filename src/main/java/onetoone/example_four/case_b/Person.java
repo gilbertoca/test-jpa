@@ -6,15 +6,15 @@ import javax.persistence.*;
 public class Person {
 
     @Id
-    Long id;
+    String ssn;
+
     String name;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
-    MedicalHistory medicalHistory;
+    public Person() {
+    }
 
-    public Person(long id, String name) {
-        this.id = id;
+    public Person(String ssn, String name) {
+        this.ssn = ssn;
         this.name = name;
     }
 
@@ -22,16 +22,7 @@ public class Person {
         return name;
     }
 
-    public Long getId() {
-        return id;
+    public String getId() {
+        return ssn;
     }
-
-    public MedicalHistory getMedicalHistory() {
-        return medicalHistory;
-    }
-
-    public void setMedicalHistory(MedicalHistory medicalHistory) {
-        this.medicalHistory = medicalHistory;
-    }
-    
 }

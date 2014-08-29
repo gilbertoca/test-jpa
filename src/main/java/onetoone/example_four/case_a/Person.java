@@ -3,26 +3,26 @@ package onetoone.example_four.case_a;
 import javax.persistence.*;
 
 @Entity
-public class Person
-{
+public class Person {
+
     @Id
-    Long id;
+    String ssn;
 
     String name;
 
-    public Person(long id, String name)
-    {
-        this.id = id;
+    public Person() {
+    }
+
+    public Person(String ssn, String name) {
+        this.ssn = ssn;
         this.name = name;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public Long getId()
-    {
-        return id;
+    public String getId() {
+        return ssn;
     }
 }

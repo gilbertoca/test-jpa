@@ -2,14 +2,12 @@ package onetoone.example_four.case_b;
 
 import java.util.List;
 import javax.persistence.*;
-import org.datanucleus.util.NucleusLogger;
 import org.junit.*;
 
 public class SimpleCaseBTest {
 
     @Test
     public void testSimple() {
-        NucleusLogger.GENERAL.info(">> test START");
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("SimpleCaseBTest");
 
         EntityManager em = emf.createEntityManager();
@@ -18,15 +16,15 @@ public class SimpleCaseBTest {
 //        {
         tx.begin();
 
-        Person person1 = new Person(1, "Jakab Gipsz");
-        MedicalHistory medicalHistory1 = new MedicalHistory();
-        person1.setMedicalHistory(medicalHistory1);
+        Person person1 = new Person("ssn1", "Jakab Gipsz");
         em.persist(person1);
+        MedicalHistory medicalHistory1 = new MedicalHistory(person1);
+        em.persist(medicalHistory1);
 
-        Person person2 = new Person(2, "Captain Nemo");
-        MedicalHistory medicalHistory2 = new MedicalHistory();
-        person2.setMedicalHistory(medicalHistory2);
+        Person person2 = new Person("ssn2", "Captain Nemo");
         em.persist(person2);
+        MedicalHistory medicalHistory2 = new MedicalHistory(person2 );
+        em.persist(medicalHistory2);
 
         em.flush();
 
@@ -55,6 +53,5 @@ public class SimpleCaseBTest {
 //        }
 
         emf.close();
-        NucleusLogger.GENERAL.info(">> test END");
     }
 }
