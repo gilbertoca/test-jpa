@@ -19,14 +19,14 @@ public class SimpleCaseBTest {
         tx.begin();
 
         Person person1 = new Person(1, "Jakab Gipsz");
+        MedicalHistory medicalHistory1 = new MedicalHistory();
+        person1.setMedicalHistory(medicalHistory1);
         em.persist(person1);
-        MedicalHistory medicalHistory1 = new MedicalHistory(person1);
-        em.persist(medicalHistory1);
 
         Person person2 = new Person(2, "Captain Nemo");
+        MedicalHistory medicalHistory2 = new MedicalHistory();
+        person2.setMedicalHistory(medicalHistory2);
         em.persist(person2);
-        MedicalHistory medicalHistory2 = new MedicalHistory(person2 );
-        em.persist(medicalHistory2);
 
         em.flush();
 
