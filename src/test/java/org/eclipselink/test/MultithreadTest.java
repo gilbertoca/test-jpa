@@ -1,4 +1,4 @@
-package org.eclipselink.test;
+package org.openjpa.test;
 
 import org.junit.*;
 import javax.persistence.*;
