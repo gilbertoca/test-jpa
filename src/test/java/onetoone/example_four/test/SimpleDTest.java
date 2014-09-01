@@ -1,4 +1,4 @@
-package org.hibernate.test;
+package onetoone.example_four.test;
 
 import org.junit.*;
 import javax.persistence.*;
