@@ -1,4 +1,4 @@
-package org.hibernate.test;
+package org.eclipselink.test;
 
 import org.junit.*;
 import javax.persistence.*;

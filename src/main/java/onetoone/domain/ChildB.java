@@ -1,14 +1,12 @@
 package onetoone.domain;
 
 
-import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
-// org.hibernate.MappingException: Composite-id class must implement Serializable: onetoone.domain.ChildB
-public class ChildB implements Serializable{
+public class ChildB {
     @Id
     @OneToOne
     private ParentB parentB;
