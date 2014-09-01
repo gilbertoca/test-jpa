@@ -1,16 +1,16 @@
-package org.datanucleus.test;
+package onetoone.example_four.test;
 
 import org.junit.*;
 import javax.persistence.*;
 import java.util.List;
 import onetoone.domain.*;
-import org.datanucleus.util.NucleusLogger;
+
 
 public class SimpleBTest {
 
     @Test
     public void testSimple() {
-        NucleusLogger.GENERAL.info(">> test START");
+        
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("SimpleBTest");
 
         EntityManager em = emf.createEntityManager();
@@ -62,6 +62,5 @@ public class SimpleBTest {
 //        }
 
         emf.close();
-        NucleusLogger.GENERAL.info(">> test END");
     }
 }
